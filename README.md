@@ -1,1 +1,1 @@
-# magnum-pii
+# mag-pii
