@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+
+import sys
+from pprint import pprint as p
+
+sys_path = sys.path[0]
+syntax = '{}/{}'
+
+# These paths will follow the first (0th) path
+sys.path.insert(1, syntax.format(sys_path, '..'))
+sys.path.insert(1, syntax.format(sys_path, '../helpers'))
+sys.path.insert(2, syntax.format(sys_path, '../findar'))
+sys.path.insert(3, syntax.format(sys_path, '../findar/findar'))
+
+# p(sys.path)
+
+import findar
+
+findar.main()
